@@ -11,7 +11,7 @@ slug: /oracles/rewards-oracles
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 There are initially three Rewards Oracles, one for each subDAO (MOBILE and IOT) and one for HNT,
-which ingest the work of all of the above Oracles to determine the appropriate emissions for each
+which ingest the work of all the above Oracles to determine the appropriate emissions for each
 subDAO.
 
 Epochs will increase from around 30 blocks (or about 30 minutes) to 24 hours, with rewards issued
@@ -20,10 +20,10 @@ every 24 hours by each Reward Oracle.
 ## Lazy Distribution of Rewards
 
 On the Solana L1, Rewards will now be "lazily distributed" to each Hotspot, meaning that instead of
-passively receiving tokens, Hotspot Owners will _redeem_ them.
+passively receiving tokens, Hotspot Owners will have to _redeem_ them.
 
 When a Hotspot Owner makes a redemption request, the Rewards Oracle will compute the difference
-between the `lifetime` and `claimed` token Rewards to determine the amount of unclaimed tokens per
+between the `lifetime` and `claimed` token Rewards to determine the number of unclaimed tokens per
 Hotspot. It will then pre-sign a transaction which the Hotspot Owner will submit to the blockchain.
 It is only at this point that Rewards will be registered on-chain and associated with the owning
 Helium Wallet.
@@ -44,7 +44,7 @@ Receipts, and the veHNT backing the MOBILE Network and emits rewards to each Hot
 ## HNT Rewards Oracle
 
 As defined in [HIP-51](https://github.com/helium/HIP/blob/main/0051-helium-dao.md), the HNT Rewards
-Oracle will issue HNT Reward emissions to each subDAOs treasury using each subDAOs Utility Score to
+Oracle will issue HNT Reward emissions to each subDAO's treasury using each subDAO's Utility Score to
 determine which percentage of the total rewards each subDAO is due.
 
 The following comprise the subDAO Utility Score:
@@ -128,11 +128,11 @@ The curves for
 and [MOBILE](https://github.com/helium/HIP/blob/main/0053-mobile-dao.md) can be found in their
 respective HIPs.
 
-This is a "one-way" transaction to convert your subDNT into HNT, as you can not burn HNT for subDNT.
+This is a "one-way" transaction to convert your subDNT into HNT, as you cannot burn HNT for subDNT.
 
 ## Other Notes
 
-- Initially, all of these Oracles will be run by the Helium Foundation, with the long-term goal that
+- Initially, all these Oracles will be run by the Helium Foundation, with the long-term goal that
   community members will also run them.
 - The buckets with raw PoC and Data Transfer receipts will be available for verification/security
   purposes.
